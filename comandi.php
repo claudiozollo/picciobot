@@ -5,7 +5,7 @@ if($msg == "/start" or $msg == "/start@picciobetabot") {
 	Ora baciatemi il culo");
 }
 
-if(strpos($stringa, '/mena') !== false){
+if(strpos($msg, '/mena') !== false){
 	
 	$text    = $msg;
 	//$sender = $username;
