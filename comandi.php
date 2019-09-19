@@ -7,6 +7,11 @@ if($msg == "/start" or $msg == "/start@picciobetabot") {
 
 if($msg == "/mena"){
 	
+	foreach($update as $t){
+		$testo .= $t;
+	}
+	
+	sm($chatID, $testo);
 	
 	//se non c'è il nome in risposta
 	if(!$replyID){
