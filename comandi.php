@@ -6,9 +6,9 @@ if($msg == "/start" or $msg == "/start@picciobetabot") {
 }
 
 if($msg == "/mena" && !$replyNome){
-	sm($chatID, "Devi specificare a quale utente cosi : /picchia nomeutente");
+	sm($chatID, "Devi rispondere ad un utente");
 }
-if($msg == "/mena" && $replyNome){
+if($msg == "/mena" && $replyNome oor $msg == "/mena" && $name){
 	
 	$utenti = array($name, $replyNome);
 
