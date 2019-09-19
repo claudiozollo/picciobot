@@ -7,18 +7,15 @@ if($msg == "/start" or $msg == "/start@picciobetabot") {
 
 if($msg == "/mena"){
 	
-	foreach($update as $t){
-		$testo .= $t;
-	}
+	$text    = $msg;
+	$sender = $username;
+	//$sender = $replyUsername;
 	
-	sm($chatID, $testo);
-	
-	//se non c'è il nome in risposta
-	if(!$replyID){
-		sm($chatID, "Devi rispondere ad un utente");
-	}
-	elseif($replyID && $userID){
-	
+	//username validation
+	$test = preg_match('/@[\w_]{5,}/', $text);
+	if ($test === 0) {
+		sm($chatID, $sender . " nessun utente trovato..";
+	} else {
 		$utenti = array($name, $replyNome);
 
 		// Utilizzo la funzione array_rand per estrarre a caso uno degli elementi della array
@@ -26,6 +23,7 @@ if($msg == "/mena"){
 
 		sm($chatID, "Dopo un duro scontro il vincitore è : ".$utenti[$n]);
 	}
+		
 }
 
 
