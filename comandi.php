@@ -8,8 +8,8 @@ if($msg == "/start" or $msg == "/start@picciobetabot") {
 if($msg == "/mena"){
 	
 	$text    = $msg;
-	$sender = $username;
-	//$sender = $replyUsername;
+	//$sender = $username;
+	$sender = $replyUsername;
 	
 	//username validation
 	$test = preg_match('/@[\w_]{5,}/', $text);
