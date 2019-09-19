@@ -9,10 +9,10 @@ if($msg == "/mena"){
 	
 	
 	//se non c'è il nome in risposta
-	if(!$replyNome){
+	if(!$replyID){
 		sm($chatID, "Devi rispondere ad un utente");
 	}
-	else{
+	elseif($replyID && $userID){
 	
 		$utenti = array($name, $replyNome);
 
